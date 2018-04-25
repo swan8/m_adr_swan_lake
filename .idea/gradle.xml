@@ -9,6 +9,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/m_adr_swan_atom_core" />
+            <option value="$PROJECT_DIR$/m_adr_swan_atom_core/AtomCore" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -4,29 +4,59 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply from: "config/dependencies.gradle"
+
 android {
-    compileSdkVersion 27
+
+    compileSdkVersion rootProject.ext.basic.compileSDK
+    buildToolsVersion rootProject.ext.basic.buildVersion
+
     defaultConfig {
+
         applicationId "swan.lake"
-        minSdkVersion 21
-        targetSdkVersion 27
+
+        minSdkVersion rootProject.ext.basic.minSDK
+        targetSdkVersion rootProject.ext.basic.targetVersion
+        multiDexEnabled true
+
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
+
+    signingConfigs {
+
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            storeFile file('SwanLake.jks')
+            storePassword 'SwanLake'
+            keyAlias 'SwanLake'
+            keyPassword 'SwanLake'
+            v2SigningEnabled true
         }
+    }
+
+    buildTypes {
+
+        release {
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+        }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    if ("${swan_conf.isDebug}") {
+        implementation project(':m_adr_swan_atom_core:AtomCore')
+    } else {
+        implementation "${swan.AtomCore}"
+    }
 }
