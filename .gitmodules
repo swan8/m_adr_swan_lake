@@ -1,0 +1,3 @@
+[submodule "m_adr_swan_atom_core"]
+	path = m_adr_swan_atom_core
+	url = git@github.com:swan8/m_adr_swan_atom_core.git
