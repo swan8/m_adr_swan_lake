@@ -1,10 +1,5 @@
 ext {
 
-    swan_conf = [
-
-            isDebug                         : true
-    ]
-
     basic = [
 
             compileSDK                      : 27,

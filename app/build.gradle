@@ -54,7 +54,7 @@ android {
 
 dependencies {
 
-    if ("${swan_conf.isDebug}") {
+    if (rootProject.ext.isDebug) {
         implementation project(':m_adr_swan_atom_core:AtomCore')
     } else {
         implementation "${swan.AtomCore}"

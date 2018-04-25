@@ -2,6 +2,8 @@
 
 apply from: 'config/settings.gradle'
 
+apply from: 'config/swan_conf.gradle'
+
 buildscript {
 
     ext.kotlin_version = '1.2.30'
