@@ -1,1 +1,1 @@
-include ':app', ':m_adr_swan_atom_core:AtomCore'
+include ':app', ':m_adr_swan_atom_core:AtomCore', ':m_adr_swan_biz_koala:Koala'

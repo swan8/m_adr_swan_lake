@@ -38,6 +38,7 @@ ext {
 
             Ver_MikePenz_FastAdapter        : "3.2.4@aar",
             Ver_MikePenz_Materialize        : "1.1.2",
+            Ver_MikePenz_MaterialDrawer     : "6.0.7@aar",
 
             Ver_Jsoup                       : "1.11.2",
             Ver_Nice_Timber                 : "1.4.0",
@@ -103,6 +104,7 @@ ext {
     mikePenz = [ // http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.mikepenz%22
 
             Materialize                     : "com.mikepenz:materialize:${libVersions.Ver_MikePenz_Materialize}",
+            MaterialDrawer                  : "com.mikepenz:materialdrawer:${libVersions.Ver_MikePenz_MaterialDrawer}",
             FastAdapter                     : "com.mikepenz:fastadapter:${libVersions.Ver_MikePenz_FastAdapter}",
             FastAdapterCommons              : "com.mikepenz:fastadapter-commons:${libVersions.Ver_MikePenz_FastAdapter}",
     ]

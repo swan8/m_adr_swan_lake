@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/m_adr_swan_atom_core" />
             <option value="$PROJECT_DIR$/m_adr_swan_atom_core/AtomCore" />
+            <option value="$PROJECT_DIR$/m_adr_swan_biz_koala" />
+            <option value="$PROJECT_DIR$/m_adr_swan_biz_koala/Koala" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -50,12 +50,18 @@ android {
     lintOptions {
         abortOnError false
     }
+
+    packagingOptions {
+        exclude 'META-INF/*'
+    }
 }
 
 dependencies {
 
     if (rootProject.ext.isDebug) {
+        println("====================" + rootProject.ext.isDebug)
         implementation project(':m_adr_swan_atom_core:AtomCore')
+        implementation project(':m_adr_swan_biz_koala:Koala')
     } else {
         implementation "${swan.AtomCore}"
     }

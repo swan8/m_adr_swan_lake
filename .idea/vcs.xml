@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/m_adr_swan_atom_core" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/m_adr_swan_biz_koala" vcs="Git" />
   </component>
 </project>

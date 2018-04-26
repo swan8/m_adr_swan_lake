@@ -27,6 +27,9 @@ dependencies {
     api "${ReactiveX.RxKotlin}"
 
     api "${mikePenz.Materialize}"
+    api ("${mikePenz.MaterialDrawer}") {
+        transitive = true
+    }
     api "${mikePenz.FastAdapter}"
     api "${mikePenz.FastAdapterCommons}"
 

@@ -3,9 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/m_adr_swan_atom_core/AtomCore/AtomCore.iml" filepath="$PROJECT_DIR$/m_adr_swan_atom_core/AtomCore/AtomCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/m_adr_swan_biz_koala/Koala/Koala.iml" filepath="$PROJECT_DIR$/m_adr_swan_biz_koala/Koala/Koala.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwanLake.iml" filepath="$PROJECT_DIR$/SwanLake.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/m_adr_swan_atom_core/m_adr_swan_atom_core.iml" filepath="$PROJECT_DIR$/m_adr_swan_atom_core/m_adr_swan_atom_core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/m_adr_swan_biz_koala/m_adr_swan_biz_koala.iml" filepath="$PROJECT_DIR$/m_adr_swan_biz_koala/m_adr_swan_biz_koala.iml" />
     </modules>
   </component>
 </project>
