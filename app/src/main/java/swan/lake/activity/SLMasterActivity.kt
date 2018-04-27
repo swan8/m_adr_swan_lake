@@ -2,11 +2,11 @@ package swan.lake.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import com.joanzapata.iconify.IconDrawable
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
-import kotlinx.android.synthetic.main.swan_lake_master.*
 import swan.atom.core.base.AtomCoreBaseActivity
 import swan.atom.core.icon.AtomCoreIconifyIcons
 import swan.lake.R
@@ -21,12 +21,13 @@ class SLMasterActivity : AtomCoreBaseActivity() {
         setContentView(R.layout.swan_lake_master)
 
 //        setSupportActionBar(toolbar)
-        toolbar?.title = "Drawer"
+
+        findViewById<Toolbar>(R.id.cirrusCoreToolbar).title = "cirrusCoreToolbar"
 
         drawer =
                 DrawerBuilder(this)
                         .withRootView(R.id.drawer_container)
-                        .withToolbar(toolbar)
+//                        .withToolbar(toolbar)
                         .withDisplayBelowStatusBar(false)
                         .withActionBarDrawerToggleAnimated(true)
                         .addDrawerItems(
