@@ -6,7 +6,6 @@ import com.joanzapata.iconify.IconDrawable
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem
 import kotlinx.android.synthetic.main.swan_lake_master.*
 import swan.atom.core.base.AtomCoreBaseActivity
 import swan.atom.core.icon.AtomCoreIconifyIcons

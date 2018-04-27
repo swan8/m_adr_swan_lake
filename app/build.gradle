@@ -4,8 +4,6 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-apply from: "config/dependencies.gradle"
-
 android {
 
     compileSdkVersion rootProject.ext.basic.compileSDK
@@ -37,6 +35,15 @@ android {
 
     buildTypes {
 
+        debug {
+            zipAlignEnabled true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+        }
+
         release {
             zipAlignEnabled true
             minifyEnabled false
@@ -59,7 +66,6 @@ android {
 dependencies {
 
     if (rootProject.ext.isDebug) {
-        println("====================" + rootProject.ext.isDebug)
         implementation project(':m_adr_swan_atom_core:AtomCore')
         implementation project(':m_adr_swan_biz_koala:Koala')
     } else {
