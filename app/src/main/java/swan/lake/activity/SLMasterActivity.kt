@@ -2,6 +2,7 @@ package swan.lake.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import com.joanzapata.iconify.IconDrawable
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
@@ -25,6 +26,16 @@ class SLMasterActivity : AtomCoreBaseToolbarActivity() {
         cirrus?.let {
             builder
                     .withCirrusTitle(R.string.app_name)
+                    .withCirrusMenu(R.menu.swan_lake_menu, Toolbar.OnMenuItemClickListener {
+                        when(it.itemId) {
+                            0 -> {
+
+                            }
+                        }
+
+                        false
+                    })
+                    .withCirrusOverflowResId(R.drawable.cirrus_ic_menu_white_64dp)
                     .build(it)
         }
 
