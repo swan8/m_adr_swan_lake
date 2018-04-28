@@ -7,27 +7,28 @@ import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.DividerDrawerItem
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
-import swan.atom.core.base.AtomCoreBaseActivity
+import swan.atom.core.base.AtomCoreBaseToolbarActivity
 import swan.atom.core.icon.AtomCoreIconifyIcons
-import swan.atom.core.ui.Cirrus
 import swan.lake.R
 
-class SLMasterActivity : AtomCoreBaseActivity() {
+class SLMasterActivity : AtomCoreBaseToolbarActivity() {
 
     private var drawer: Drawer? = null
 
-    private val builder: Cirrus.Companion.CirrusBuilder = Cirrus.Companion.CirrusBuilder()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.swan_lake_master)
 
-        val cirrus: Cirrus? = findViewById<Cirrus>(R.id.cirrus)
+        layoutResId = R.layout.swan_lake_master
+
+        cirrusResId = R.id.cirrus
+
         cirrus?.let {
             builder
                     .withCirrusTitle(R.string.app_name)
                     .build(it)
         }
+
+        immersionBar.init()
 
         drawer =
                 DrawerBuilder(this)
