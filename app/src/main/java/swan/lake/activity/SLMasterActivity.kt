@@ -11,6 +11,7 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import swan.atom.core.base.AtomCoreBaseToolbarActivity
 import swan.atom.core.icon.AtomCoreIconifyIcons
 import swan.lake.R
+import swan.lake.eternal.ISwanLakeMasterDrawerConst
 
 class SLMasterActivity : AtomCoreBaseToolbarActivity() {
 
@@ -48,33 +49,38 @@ class SLMasterActivity : AtomCoreBaseToolbarActivity() {
                         .withActionBarDrawerToggleAnimated(true)
                         .addDrawerItems(
                                 PrimaryDrawerItem()
-                                        .withIdentifier(1)
+                                        .withIdentifier(ISwanLakeMasterDrawerConst.IDENTIFIER_HOME)
                                         .withName("Home")
-                                        .withSelectable(false)
                                         .withIcon(IconDrawable(applicationContext, AtomCoreIconifyIcons.ATOM_CORE_EARTH)),
 
                                 PrimaryDrawerItem()
-                                        .withIdentifier(11)
+                                        .withIdentifier(ISwanLakeMasterDrawerConst.IDENTIFIER_KOALA)
                                         .withName("Koala")
+                                        .withSelectable(false)
+                                        .withIcon(IconDrawable(applicationContext, AtomCoreIconifyIcons.ATOM_CORE_DIAMOND)),
+
+                                PrimaryDrawerItem()
+                                        .withIdentifier(ISwanLakeMasterDrawerConst.IDENTIFIER_RED_HUB)
+                                        .withName("RedHub")
                                         .withIcon(IconDrawable(applicationContext, AtomCoreIconifyIcons.ATOM_CORE_DIAMOND)),
 
                                 DividerDrawerItem(),
 
                                 PrimaryDrawerItem()
-                                        .withIdentifier(12)
+                                        .withIdentifier(ISwanLakeMasterDrawerConst.IDENTIFIER_SETTING)
                                         .withName("Setting")
                                         .withSelectable(false)
                                         .withIcon(IconDrawable(applicationContext, AtomCoreIconifyIcons.ATOM_CORE_SETTING)),
 
                                 PrimaryDrawerItem()
-                                        .withIdentifier(13)
+                                        .withIdentifier(ISwanLakeMasterDrawerConst.IDENTIFIER_ABOUT)
                                         .withName("About")
                                         .withSelectable(false)
                                         .withIcon(IconDrawable(applicationContext, AtomCoreIconifyIcons.ATOM_CORE_INFORMATION))
                         )
                         .withOnDrawerItemClickListener { _, _, drawerItem ->
                             when (drawerItem.identifier) {
-                                11L -> {
+                                ISwanLakeMasterDrawerConst.IDENTIFIER_KOALA -> {
                                     startActivity(Intent("swan.biz.koala.activity.MzituMasterActivity.action"))
                                     true
                                 }
